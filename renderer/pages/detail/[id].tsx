@@ -4,6 +4,7 @@ import { User } from '../../interfaces'
 import { findAll, findData } from '../../utils/sample-api'
 import ListDetail from '../../components/ListDetail'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import React from 'react'
 
 type Params = {
   id?: string
@@ -47,14 +48,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const item = await findData(Array.isArray(id) ? id[0] : id)
     return {
       props: {
-        item,
-      },
+        item
+      }
     }
   } catch (err) {
     return {
       props: {
-        errors: err.message,
-      },
+        errors: err.message
+      }
     }
   }
 }

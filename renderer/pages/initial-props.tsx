@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import List from '../components/List'
 import { User } from '../interfaces'
 import { findAll } from '../utils/sample-api'
+import React from 'react'
 
 type Props = {
   items: User[]
